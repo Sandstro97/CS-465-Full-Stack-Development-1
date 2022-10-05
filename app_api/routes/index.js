@@ -1,12 +1,16 @@
 const express = require('express');
-const { model } = require('mongoose');
 const router = express.Router();
 
 const tripsController = require('../controllers/trips');
 
 router
-    .route('./trips')
+    .route('/trips')
     .get(tripsController.tripsList)
-    .get(tripsController.tripsFindByCode);
+    .post(tripsController.tripsAddTrip);
 
-model.exports = router;
+router
+    .route('/trips/:tripCode')
+    .get(tripsController.tripsFindByCode)
+    .put(tripsController.tripsUpdateTrip);
+
+module.exports = router;
