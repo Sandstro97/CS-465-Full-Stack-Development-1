@@ -60,7 +60,7 @@ typings/
 # next.js build output
 .next
 
-# Visual Studio Code working files
+# VSCode Ignore Files
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
@@ -68,3 +68,9 @@ typings/
 !.vscode/extensions.json
 *.code-workspace
 
+# Local History for Visual Studio Code
+.history/
+
+# dotenv environment files
+.env
+.env.test
